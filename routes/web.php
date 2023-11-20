@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HorsesController;
+use App\Http\Controllers\HorsesToolsController;
 use App\Http\Controllers\RacersController;
 use App\Models\Horses;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,9 @@ Route::get('/stable/detail/{showHorses}', [HorsesController::class, 'show']);
 
 Route::get('/player/all', [RacersController ::class, 'index']);
 Route::get('/player/detail/{showRacers}', [RacersController::class, 'show']);
+
+Route::get('/tools/all', [HorsesToolsController ::class, 'index']);
+Route::get('/tools/detail/{showTools}', [HorsesToolsController ::class, 'show']);
 
 // Route::get('/stable/all', function (){
 //     return view('stable/all', [
